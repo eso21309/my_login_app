@@ -48,6 +48,7 @@ class SignInViewModel {
       await _auth.signOut(); // Firebase 로그아웃
       isSignedIn.value = false; // 상태 업데이트
       print('로그아웃 성공');
+      print('로그아웃 후 로그인 상태: ${isSignedIn.value}'); // 상태 확인
     } catch (e) {
       print('Error signing out: $e');
     }

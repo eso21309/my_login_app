@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:my_login_app/sign_in_page.dart';
 import 'firebase_options.dart';
-import 'package:my_login_app/sign_in_view.dart.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("구글로그인"),
+          title: const Text("구글 로그인"),
         ),
         body: const Center(
-          child: SignInView(), // View 파일로 분리
+          child: SignInPage(), // View 파일로 분리
         ),
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_login_app/sign_in_viewmodel.dart';
 
-class SignInView extends StatelessWidget {
-  const SignInView({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,9 @@ class SignInView extends StatelessWidget {
             ElevatedButton(
               onPressed: () async {
                 if (isSignedIn) {
-                  await SignInViewModel.instance.signOut(); // 로그아웃 함수 연결
+                  await SignInViewModel.instance.signOut(); // 로그아웃 함수 호출
                 } else {
-                  await SignInViewModel.instance.signIn(); // 로그인 함수 연결
+                  await SignInViewModel.instance.signIn(); // 로그인 함수 호출
                 }
               },
               child: Text(isSignedIn ? '로그아웃 하기' : '구글로 시작하기'), // 버튼 텍스트 변경
